@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KANYE WEST ARCHIVE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <section class="player-deck">
+            <div class="art-display">
+                <div class="art-glow" id="art-glow"></div>
+                <img id="cover-art" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><rect width='100%25' height='100%25' fill='%23111'/></svg>" alt="Album Cover">
+            </div>
+
+            <div class="now-playing-info">
+                <h1 id="track-title">/// READY</h1>
+                <h2 id="album-title">Select an album to begin playback</h2>
+            </div>
+
+            <div class="controls-container">
+                <div class="progress-wrapper" id="progress-wrapper">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="time-display">
+                    <span id="current-time">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+
+                <div class="playback-buttons">
+                    <button class="control-btn" id="prev-btn">
+                        <svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+                    </button>
+                    <button class="control-btn play-pause-btn" id="play-pause-btn">
+                        <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <svg id="pause-icon" viewBox="0 0 24 24" style="display: none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                    </button>
+                    <button class="control-btn" id="next-btn">
+                        <svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <audio id="audio-engine" preload="auto"></audio>
+        </section>
+
+        <section class="archive-panel">
+            <div class="archive-header">
+                <h2>MASTER ARCHIVE</h2>
+            </div>
+            <div class="tracklist-container">
+                <ul id="tracklist" class="tracklist"></ul>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
